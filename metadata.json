@@ -1,0 +1,6 @@
+{
+  "name": "Advanced Brain Tumor Detection",
+  "description": "A web application for detecting brain tumors from medical images using deep learning models (CNN and MobileNetV2) executed with ONNX Runtime Web.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
