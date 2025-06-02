@@ -12,20 +12,20 @@ const AboutUs: React.FC = () => {
     {
       name: "Deyndrawan Sutrisno",
       program: "Electrical Engineering Student of 2021",
-      description: "A passionate developer focusing on AI applications in healthcare. Contributed to model integration and UI development for this project.",
-      imageUrl: "https://placehold.co/150x150/64748b/e2e8f0/png?text=Deyndra" 
+      description: "A dedicated developer with a strong interest in AI applications for healthcare, responsible for fine-tuning the machine learning model to achieve optimal performance. Actively engaged in searching for and reviewing relevant academic references to ensure the project is grounded in the latest research. Additionally, supervised the overall workflow, providing guidance and oversight to ensure the successful integration of all project components.",
+      imageUrl: "/asset/deyn.png" // Updated to use local asset
     },
     {
       name: "I Gede Bagus Jayendra",
       program: "Electrical Engineering Student of 2022",
-      description: "Specializes in data processing and machine learning algorithms. Played a key role in dataset preparation and model optimization.",
-      imageUrl: "https://placehold.co/150x150/64748b/e2e8f0/png?text=Gede" 
+      description: "Specializes in data processing and machine learning algorithms, with a central role in designing the website from scratch to seamlessly bridge the AI inference engine with the user interface. Responsible for fine-tuning the AI ONNX workflow to ensure accurate and efficient model performance. Additionally, handled the literature review and methodology, rigorously cross-checking results to validate the effectiveness and reliability of the implemented approach.",
+      imageUrl: "/asset/gede.jpg" // Updated to use local asset
     },
     {
       name: "Bayu Adi Pambudi",
-      program: "Electrical Engineering Student of 2021",
-      description: "Focused on user experience and ethical AI. Ensured the application is intuitive and considers the implications of AI in medical diagnostics.",
-      imageUrl: "https://placehold.co/150x150/64748b/e2e8f0/png?text=Bayu" 
+      program: "Electrical Engineering Student of 2022",
+      description: "Demonstrated a strong commitment to ethical AI, carefully considering the broader implications of AI in medical diagnostics. Actively involved in researching and integrating the latest AI references to support and enhance the project’s development. Played a key role in verifying and validating data for building the AI model, and took primary responsibility for compiling, refining, and finalizing the project’s comprehensive report.",
+      imageUrl: "/asset/bayu.jpg" // Updated to use local asset
     },
   ];
 
@@ -38,7 +38,7 @@ const AboutUs: React.FC = () => {
       <h2 id="about-us-title" className="text-4xl md:text-5xl font-mono font-bold text-center text-slate-100 mb-8 tracking-wider">
         ABOUT US
       </h2>
-      <p className="text-center text-slate-300 mb-12 md:mb-16 max-w-3xl mx-auto text-base md:text-lg leading-relaxed">
+      <p className="text-center text-slate-300 mb-12 md:mb-16 max-w-6xl mx-auto text-base md:text-lg leading-relaxed">
         We are a team from the UNNES Electrical Engineering Department, driven by the goal of creating a positive impact on the world. This project, developed for our Artificial Intelligence course, serves as a practical exploration of AI's potential and aims to highlight its significant benefits within the healthcare domain.
       </p>
       
@@ -64,7 +64,7 @@ const AboutUs: React.FC = () => {
                   <img 
                     src={student.imageUrl} 
                     alt={student.name} 
-                    className="w-full h-full object-cover" // object-cover ensures the image fills the circle
+                    className="w-full h-full object-cover object-[center_20%]" // Adjusted object position to move image down
                   />
                 ) : (
                   // Fallback Placeholder Icon
