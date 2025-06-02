@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Brain Tumor Detection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Outfit", -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden; /* Prevent horizontal scrollbar during animations */
+      background-color: #1e1b4b; /* Fallback for dark purple, e.g. purple-900 */
+    }
+    .glassmorphism {
+      background: rgba(255, 255, 255, 0.08); /* Lighter, milky translucency */
+      border-radius: 16px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Softer, more diffuse shadow */
+      backdrop-filter: blur(12px); 
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle light border for definition */
+    }
+
+    /* Simplified blink caret based on user feedback for ON-DELAY-OFF */
+    @keyframes blink-caret-simple {
+        0%, 50% { opacity: 1; } /* ON for 500ms */
+        50%, 100% { opacity: 0; } /* OFF for 500ms */
+    }
+    .caret-blink {
+      animation: blink-caret-simple 1s step-end infinite;
+      color: #d946ef; /* fuchsia-400 */
+    }
+
+    /* Initial load animations */
+    .animate-slide-up-fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+    .animate-slide-up-fade.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    @keyframes slide-in-left-kf {
+      from { transform: translateX(-50px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .animate-slide-in-left {
+      animation: slide-in-left-kf 0.6s ease-out forwards;
+    }
+
+    @keyframes slide-in-right-kf {
+      from { transform: translateX(50px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .animate-slide-in-right {
+      animation: slide-in-right-kf 0.6s ease-out forwards;
+    }
+
+    @keyframes popup-container-fade-in-kf {
+      from { opacity: 0; transform: scale(0.9) translateY(10px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .animate-popup-container-fade-in {
+      animation: popup-container-fade-in-kf 0.4s ease-out forwards;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "onnxruntime-web": "https://esm.sh/onnxruntime-web@^1.22.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-pink-800">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
